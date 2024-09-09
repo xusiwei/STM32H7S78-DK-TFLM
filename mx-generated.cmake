@@ -13,19 +13,6 @@ if((${BUILD_CONTEXT} MATCHES .*Appli.*) OR (NOT DEFINED BUILD_CONTEXT))
     )
 	set(ST_BOOT_FLASH_APPLI_PROJECT_BUILD_TARGET ${CMAKE_SOURCE_DIR}/Appli/build/STM32H7S78-DK-XIP_Appli${CMAKE_EXECUTABLE_SUFFIX_CXX} CACHE FILEPATH "Path to appli project target")
 endif()
-#-----------------------Build ExtMemLoader Project-----------------------#
-if((${BUILD_CONTEXT} MATCHES .*ExtMemLoader.*) OR (NOT DEFINED BUILD_CONTEXT))
-    message("   Build context: " ExtMemLoader)
-    ExternalProject_Add(STM32H7S78-DK-XIP_ExtMemLoader
-        BINARY_DIR                  ${CMAKE_SOURCE_DIR}/ExtMemLoader/build
-        SOURCE_DIR                  ${PROJECT_SOURCE_DIR}/ExtMemLoader
-        PREFIX                      ExtMemLoader
-        CONFIGURE_HANDLED_BY_BUILD  true
-        INSTALL_COMMAND             ""
-        CMAKE_ARGS                  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-    )
-	set(ST_BOOT_FLASH_EXTMEMLOADER_PROJECT_BUILD_TARGET ${CMAKE_SOURCE_DIR}/ExtMemLoader/build/STM32H7S78-DK-XIP_ExtMemLoader${CMAKE_EXECUTABLE_SUFFIX_CXX} CACHE FILEPATH "Path to extmemloader project target")
-endif()
 #-----------------------Build Boot Project-----------------------#
 if((${BUILD_CONTEXT} MATCHES .*Boot.*) OR (NOT DEFINED BUILD_CONTEXT))
     message("   Build context: " Boot)

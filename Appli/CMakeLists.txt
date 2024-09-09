@@ -79,6 +79,10 @@ if(CMAKE_C_STANDARD LESS 11)
 endif()
 
 
+# Post build commands
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD 
+  COMMAND ${CMAKE_OBJCOPY} -O srec ${CMAKE_PROJECT_NAME}.elf ${CMAKE_PROJECT_NAME}.srec
+  )
 
 
 

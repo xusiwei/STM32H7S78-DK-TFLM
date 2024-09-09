@@ -42,6 +42,8 @@ add_executable(${CMAKE_PROJECT_NAME})
 # Include mx-generated 
 include("mx-generated.cmake")
 
+message(STATUS "cubeide_cubeprogrammer_path=${cubeide_cubeprogrammer_path}")
+
 # Enable CMake support for ASM and C languages
 enable_language(C ASM)
 
@@ -79,6 +81,9 @@ if(CMAKE_C_STANDARD LESS 11)
 endif()
 
 
+# Post build commands
+add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD 
+  COMMAND bash "../postbuild.sh" "${CMAKE_CURRENT_BINARY_DIR}")
 
 
 

@@ -90,5 +90,6 @@ else
    echo "warning :: File copy failed under STM32CubeIDE please check that the folder exists."
 fi
 
+
 	exit 0
 fi

@@ -10,17 +10,17 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ./Inc
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Inc
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/boot
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/sal
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/psram
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/sdcard
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/user
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/CMSIS/Device/ST/STM32H7RSxx/Include
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/CMSIS/Include
+    ../Drivers/STM32H7RSxx_HAL_Driver/Inc
+    ../Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy
+    ../Middlewares/ST/STM32_ExtMem_Manager
+    ../Middlewares/ST/STM32_ExtMem_Manager/boot
+    ../Middlewares/ST/STM32_ExtMem_Manager/sal
+    ../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp
+    ../Middlewares/ST/STM32_ExtMem_Manager/psram
+    ../Middlewares/ST/STM32_ExtMem_Manager/sdcard
+    ../Middlewares/ST/STM32_ExtMem_Manager/user
+    ../Drivers/CMSIS/Device/ST/STM32H7RSxx/Include
+    ../Drivers/CMSIS/Include
 )
 
 # Add sources to executable
@@ -29,31 +29,31 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ./Src/extmem_manager.c
     ./Src/stm32h7rsxx_it.c
     ./Src/stm32h7rsxx_hal_msp.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_cortex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_gpio.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_xspi.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_cortex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_gpio.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_xspi.c
     ./Src/system_stm32h7rsxx.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/boot/stm32_boot_xip.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_xspi.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_sd.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_data.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_driver.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/psram/stm32_psram_driver.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/sdcard/stm32_sdcard_driver.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Middlewares/ST/STM32_ExtMem_Manager/user/stm32_user_driver.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/stm32_extmem.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/boot/stm32_boot_xip.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_xspi.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/sal/stm32_sal_sd.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_data.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/nor_sfdp/stm32_sfdp_driver.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/psram/stm32_psram_driver.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/sdcard/stm32_sdcard_driver.c
+    ../Middlewares/ST/STM32_ExtMem_Manager/user/stm32_user_driver.c
     ./Src/sysmem.c
     ./Src/syscalls.c
     ./Startup/startup_stm32h7s7xx.s

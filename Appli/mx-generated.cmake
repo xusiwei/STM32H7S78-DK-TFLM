@@ -10,10 +10,10 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     ./Inc
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Inc
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/CMSIS/Device/ST/STM32H7RSxx/Include
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/CMSIS/Include
+    ../Drivers/STM32H7RSxx_HAL_Driver/Inc
+    ../Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy
+    ../Drivers/CMSIS/Device/ST/STM32H7RSxx/Include
+    ../Drivers/CMSIS/Include
 )
 
 # Add sources to executable
@@ -21,20 +21,20 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ./Src/main.c
     ./Src/stm32h7rsxx_it.c
     ./Src/stm32h7rsxx_hal_msp.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_cortex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_gpio.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr_ex.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim.c
-    C:/Users/xu/STM32Cube/Repository/STM32Cube_FW_H7RS_V1.1.0/Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_cortex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_rcc_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_flash_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_gpio.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_dma_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_pwr_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim_ex.c
     ./Src/system_stm32h7rsxx.c
     ./Src/sysmem.c
     ./Src/syscalls.c

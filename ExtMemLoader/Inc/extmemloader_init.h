@@ -59,4 +59,6 @@ void Error_Handler(void);
 
 /* USER CODE END Private defines */
 
+#define GREEN_Pin GPIO_PIN_1
+#define GREEN_GPIO_Port GPIOO
 #endif /* EXTMEMLOADER_INIT_H */

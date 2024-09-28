@@ -1,0 +1,3 @@
+[submodule "Middlewares/tensorflow/tflite-micro"]
+	path = Middlewares/tensorflow/tflite-micro
+	url = ../tflite-micro.git

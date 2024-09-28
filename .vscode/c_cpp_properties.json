@@ -13,7 +13,8 @@
                 "${workspaceFolder}/Drivers/STM32H7RSxx_HAL_Driver/Inc/Legacy",
                 "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7RSxx/Include",
                 "${workspaceFolder}/Drivers/CMSIS/Include",
-                "${workspaceFolder}/Middlewares/ST/STM32_ExtMem_Manager"
+                "${workspaceFolder}/Middlewares/ST/STM32_ExtMem_Manager",
+                "${workspaceFolder}/Middlewares/tensorflow/tflite-micro"
             ],
             "defines": [
                 "USE_HAL_DRIVER ",

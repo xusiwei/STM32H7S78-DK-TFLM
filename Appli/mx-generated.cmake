@@ -35,6 +35,8 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_exti.c
     ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim.c
     ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_tim_ex.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_uart.c
+    ../Drivers/STM32H7RSxx_HAL_Driver/Src/stm32h7rsxx_hal_uart_ex.c
     ./Src/system_stm32h7rsxx.c
     ./Src/sysmem.c
     ./Src/syscalls.c

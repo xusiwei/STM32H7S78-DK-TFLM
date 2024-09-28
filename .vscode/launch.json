@@ -29,8 +29,8 @@
             "serverArgs": [
                 "-m", "1",
                 "-t", "-s", 
-                "-el", "E:/DIY/STM32H7S78-DK/Code/STM32H7S78-DK-XIP/ExtMemLoader/build/STM32H7S78-DK-XIP_ExtMemLoader.elf"
-                "-el", "${config:STM32VSCodeExtension.cubeCLT.path}/STM32CubeProgrammer/bin/ExternalLoader/myExternalLoaderFilename.stldr" // Default loader for current board
+                // "-el", "E:/DIY/STM32H7S78-DK/Code/STM32H7S78-DK-XIP/ExtMemLoader/build/STM32H7S78-DK-XIP_ExtMemLoader.elf"
+                "-el", "${config:STM32VSCodeExtension.cubeCLT.path}/STM32CubeProgrammer/bin/ExternalLoader/MX66UW1G45G_STM32H7S78-DK.stldr" // Default loader for current board
             ],
             "preLaunchTask": "Build + Flash in external Memory"
         },

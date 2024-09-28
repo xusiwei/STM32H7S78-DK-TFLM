@@ -19,6 +19,15 @@ endif()
 
 message("Build type: " ${CMAKE_BUILD_TYPE})
 
+find_program(CCACHE_PROGRAM ccache)
+if (CCACHE_PROGRAM)
+    set(CMAKE_C_COMPILER_LAUNCHER "${CCACHE_PROGRAM}")
+    set(CMAKE_CXX_COMPILER_LAUNCHER "${CCACHE_PROGRAM}")
+    message(STATUS "Ccache found: ${CCACHE_PROGRAM}!")
+else ()
+    message(STATUS "Ccache not found!")
+endif ()
+
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
 
@@ -48,29 +57,44 @@ enable_language(C ASM)
 # In order to use CMake for cross-compiling
 set(CMAKE_CXX_COMPILER_FORCED "true") 
 
+set(TOP_DIR ..)
+set(TENSORFLOW_SUBDIR Middlewares/tensorflow/tflite-micro)
+set(TENSORFLOW_DIR ${TOP_DIR}/${TENSORFLOW_SUBDIR})
+
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE 
     # Add user defined symbols
+    # KEYWORD_BENCHMARK
+    PERSON_DETECTION_BENCHMARK
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+    ${TENSORFLOW_DIR}
 )
 
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+    Src/tflm_benchmark.cc
+    Src/tflm_benchmark.h
+    # 添加 STM32 的计时实现：
+    Src/micro_time.cc
 )
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined library search paths
+    ../build/Release/${TENSORFLOW_SUBDIR}
 )
 
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined libraries
+    # keyword_benchmark
+    person_detection_benchmark
+    tflite-micro
 )
 
 # Validate that STM32CubeMX code is compatible with C standard
@@ -85,7 +109,10 @@ add_custom_command(TARGET ${CMAKE_PROJECT_NAME} POST_BUILD
   )
 
 
-
+# 支持浮点数格式化
+target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
+  -u _printf_float
+)
 
 
 

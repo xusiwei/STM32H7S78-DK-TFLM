@@ -1,5 +1,14 @@
 {
     "files.associations": {
-        "main.h": "c"
-    }
+        "main.h": "c",
+        "*.tcc": "cpp",
+        "stdio.h": "c"
+    },
+    "cmake.buildArgs": [
+        "-j",
+        "8"
+    ],
+    "codesnap.containerPadding": "0em",
+    "codesnap.showWindowControls": false,
+    "codesnap.realLineNumbers": true
 }
